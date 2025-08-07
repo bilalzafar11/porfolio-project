@@ -27,20 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ⬆️ SCROLL TO TOP BUTTON
-  const scrollBtn = document.querySelector('.scroll-to-top');
-  if (scrollBtn) {
-    const toggleScrollBtn = () => {
-      scrollBtn.classList.toggle('show', window.scrollY > 300);
-    };
+// 🔼 Scroll-to-Top Button
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-    toggleScrollBtn(); // initial check
-    window.addEventListener('scroll', toggleScrollBtn);
+window.addEventListener("scroll", () => {
+  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
 
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
+scrollBtn?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
   // 📄 RESUME DOWNLOAD BUTTON
   const downloadBtn = document.querySelector('.download-btn');
@@ -99,3 +95,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
