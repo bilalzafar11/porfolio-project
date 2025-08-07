@@ -38,6 +38,8 @@ scrollBtn?.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+
+
   // 📄 RESUME DOWNLOAD BUTTON
   const downloadBtn = document.querySelector('.download-btn');
   if (downloadBtn) {
@@ -95,4 +97,3 @@ scrollBtn?.addEventListener("click", () => {
     }
   }
 });
-
