@@ -884,25 +884,35 @@ body.dark-mode .form-message {
   color: #ffffff;
 }
 
-/* ⬆️ Scroll To Top Button */
-.scroll-to-top {
+/* ========== Scroll to Top Button ========== */
+#scrollTopBtn {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: transparent;
-  color: #fff;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #007bff;
+  color: #ffffff;
   border: none;
-  padding: 0.6rem 1rem;
   border-radius: 50%;
-  font-size: 1.2rem;
   cursor: pointer;
+  font-size: 1.3rem;
   display: none;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
-  transition: background 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.scroll-to-top:hover {
-  background-color: var(--hover-bg);
+#scrollTopBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#scrollTopBtn:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* =============================
@@ -1040,3 +1050,4 @@ footer {
     font-size: 0.8rem;
   }
 }
+
