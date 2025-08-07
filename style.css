@@ -715,17 +715,18 @@ body.dark .download-btn:hover {
   }
 
   .project-card .btn {
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 0.6rem;
+    width: 90%;                
+    font-size: 0.85rem;        
+    padding: 0.5rem 0.8rem;   
     text-align: center;
+    margin: 0.5rem auto 0;    
+    display: block;
   }
 
   .project-thumb {
     height: 160px;
   }
 }
-
 
 
 /* ================================
@@ -1050,4 +1051,5 @@ footer {
     font-size: 0.8rem;
   }
 }
+
 
