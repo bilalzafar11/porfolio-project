@@ -733,26 +733,25 @@ body.dark .download-btn:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer; /* Clickable feel */
-  transform: translateY(0); /* Base position set */
+  cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-8px) scale(1.02); /* Slight zoom */
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
-  transition: transform 0.4s ease; /* Smooth image animation */
+  transition: transform 0.4s ease;
 }
 
 .project-card:hover img {
-  transform: scale(1.05); /* Image zoom on hover */
+  transform: scale(1.05);
 }
 
 .project-thumb {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -765,7 +764,7 @@ body.dark .download-btn:hover {
 
 .project-card p {
   font-size: 1rem;
-  margin: 0 1rem 1rem 1rem;
+  margin: 0 1rem 1rem;
   line-height: 1.5;
   color: var(--card-text);
   flex-grow: 1;
@@ -791,8 +790,14 @@ body.dark .download-btn:hover {
   transform: translateY(-2px);
 }
 
-/* ========== Responsive Design ========== */
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Tablet: 768px and below */
 @media (max-width: 768px) {
+  .projects-section {
+    padding: 3rem 1.5rem;
+  }
+
   .section-title {
     font-size: 2rem;
   }
@@ -800,6 +805,10 @@ body.dark .download-btn:hover {
   .section-subtitle {
     font-size: 1rem;
     margin-bottom: 2rem;
+  }
+
+  .project-thumb {
+    height: 180px;
   }
 
   .project-card h3 {
@@ -816,9 +825,10 @@ body.dark .download-btn:hover {
   }
 }
 
+/* Mobile: 480px and below */
 @media (max-width: 480px) {
   .projects-section {
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem;
   }
 
   .section-title {
@@ -829,25 +839,51 @@ body.dark .download-btn:hover {
     font-size: 0.95rem;
   }
 
-  .project-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .project-card p {
-    font-size: 0.9rem;
-  }
-
-  .project-card .btn {
-    width: 90%;                
-    font-size: 0.85rem;        
-    padding: 0.5rem 0.8rem;   
-    text-align: center;
-    margin: 0.5rem auto 0;    
-    display: block;
+  .project-grid {
+    grid-template-columns: 1fr; /* One card per row */
+    gap: 1.5rem;
   }
 
   .project-thumb {
     height: 160px;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+    margin: 0.8rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+    margin: 0 0.8rem 0.8rem;
+  }
+
+  .project-card .btn {
+    width: 100%; /* Full width on mobile */
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+    text-align: center;
+    margin: 0.5rem auto 1rem;
+    display: block;
+  }
+}
+
+/* Extra Small Devices: 360px and below */
+@media (max-width: 360px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+  }
+
+  .project-thumb {
+    height: 140px;
   }
 }
 
