@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ===== Meta ===== -->
+  <!-- ===== Meta Tags ===== -->
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Muhammad Bilal Zafar" />
-  <meta name="description" content="Contact page of Muhammad Bilal Zafar – Web Developer Intern." />
+  <meta name="description" content="Learn more about Muhammad Bilal Zafar – Web Developer Intern, skills, and journey." />
+
+  <!-- ===== Title & Favicon ===== -->
+  <title>About – Muhammad Bilal Zafar</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <!-- ===== Google Fonts ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- ===== Title & Styles ===== -->
-  <title>Contact | Muhammad Bilal Zafar</title>
+  <!-- ===== Stylesheet ===== -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <!-- ===== Navbar ===== -->
@@ -21,8 +26,8 @@
     <nav class="navbar">
       <div class="logo" aria-label="Website Logo">Muhammad Bilal Zafar</div>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -30,44 +35,88 @@
     </nav>
   </header>
 
-  <!-- ===== Contact Section ===== -->
-  <main class="contact-section container">
-    <h2>Contact Me</h2>
-    <p>Have a question or want to work together? Fill out the form below.</p>
+  <!-- ===== Main Content ===== -->
+  <main>
+    <!-- ===== About & Skills Section ===== -->
+    <section class="about-skills" id="about">
+      <div class="about-container">
+        
+        <!-- Profile Image -->
+        <div class="about-image">
+          <img src="bilal.jpg" alt="Muhammad Bilal Zafar" class="profile-pic" />
+        </div>
 
-    <form id="contactForm" class="contact-form" novalidate>
-      <div class="form-group">
-        <label for="name">Name<span>*</span></label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required />
+        <!-- Highlight Bio -->
+        <p class="highlight-bio">
+          Passionate Data Science and Machine Learning enthusiast with strong frontend foundations.  
+          Skilled in Python, ML libraries, and creating user-friendly, data-driven solutions.  
+          Always eager to learn and tackle real-world challenges.
+        </p>
+
+        <!-- About Me -->
+        <div class="about-content">
+          <h1>About Me</h1>
+          <p>Hello! I'm <strong>Muhammad Bilal Zafar</strong>, a dedicated and growth-driven tech enthusiast with a strong focus on <strong>Data Science</strong> and <strong>Machine Learning</strong>. I thrive on transforming raw data into meaningful insights that power intelligent decision-making.</p>
+
+          <p>My journey began with a solid foundation in <strong>Frontend Development</strong>, where I crafted engaging and responsive interfaces using HTML, CSS, and JavaScript. Over time, my curiosity and problem-solving mindset led me into the world of data.</p>
+
+          <p>Currently, I specialize in building data-driven applications using <strong>Python</strong> and popular libraries like <strong>Pandas, NumPy, Matplotlib, Seaborn,</strong> and <strong>Scikit-Learn</strong>. I enjoy applying machine learning techniques to create predictive models that solve real-world problems.</p>
+
+          <p>I’m also comfortable working with tools and platforms like <strong>Firebase, Jupyter Notebook, Google Colab, Git,</strong> and <strong>GitHub</strong>, which support my development and data workflows.</p>
+
+          <p>As a lifelong learner, I’m passionate about writing clean, scalable code and continuously improving my skills to build impactful digital solutions.</p>
+        </div>
       </div>
 
-      <div class="form-group">
-        <label for="email">Email<span>*</span></label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      <!-- Skills -->
+      <div class="skills-container">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">HTML</div>
+          <div class="skill-item">CSS</div>
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">Python</div>
+          <div class="skill-item">Firebase</div>
+          <div class="skill-item">NumPy</div>
+          <div class="skill-item">Pandas</div>
+          <div class="skill-item">Matplotlib</div>
+          <div class="skill-item">Seaborn</div>
+          <div class="skill-item">Scikit-Learn</div>
+          <div class="skill-item">Machine Learning</div>
+          <div class="skill-item">Jupyter Notebook</div>
+          <div class="skill-item">Google Colab</div>
+          <div class="skill-item">Git & GitHub</div>
+          <div class="skill-item">VS Code</div>
+        </div>
       </div>
-
-      <div class="form-group">
-        <label for="message">Message<span>*</span></label>
-        <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-      </div>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-
-    <!-- ✅ Updated with accessibility -->
-    <p id="formMessage" class="form-message" aria-live="polite"></p>
+    </section>
   </main>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <p>&copy; 2025 Muhammad Bilal Zafar. All rights reserved.</p>
-  </footer>
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>&copy; 2025 Muhammad Bilal Zafar. All rights reserved.</p>
+    </div>
 
-  <!-- ===== Scripts ===== -->
+    <div class="footer-center">
+      <ul class="footer-social">
+        <li><a href="https://www.linkedin.com/in/bilal-zafar-bb2a07276/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/bilalzafar11" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.facebook.com/" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <a href="mailto:bilalzafar7350@gmail.com" class="footer-email">bilalzafar7350@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- 🔽 Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Go to top" aria-label="Scroll to top">⬆️</button>
+
+  <!-- ===== JavaScript ===== -->
   <script src="script.js"></script>
-
 </body>
 </html>
-
-
-
