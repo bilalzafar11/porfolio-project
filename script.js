@@ -40,20 +40,38 @@ scrollBtn?.addEventListener("click", () => {
 
 
 
-  // 📄 RESUME DOWNLOAD BUTTON
-  const downloadBtn = document.querySelector('.download-btn');
-  if (downloadBtn) {
-    downloadBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const resumeLink = document.createElement('a');
-      resumeLink.href = 'assets/Muhammad-Bilal-Zafar-Resume.pdf';
-      resumeLink.download = 'Muhammad-Bilal-Zafar-Resume.pdf';
-      resumeLink.style.display = 'none';
-      document.body.appendChild(resumeLink);
-      resumeLink.click();
-      document.body.removeChild(resumeLink);
-    });
-  }
+// 📄 RESUME DOWNLOAD BUTTON
+const downloadBtn = document.querySelector('.download-btn');
+
+if (downloadBtn) {
+  downloadBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // ✅ Correct path (case-sensitive on GitHub Pages)
+    const filePath = 'assets/Muhammad-Bilal-Zafar-Resume.pdf';
+
+    // Check if file exists (optional but safer)
+    fetch(filePath)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`File not found: ${filePath}`);
+        }
+
+        // Create hidden link for download
+        const resumeLink = document.createElement('a');
+        resumeLink.href = filePath;
+        resumeLink.download = 'Muhammad-Bilal-Zafar-Resume.pdf';
+        document.body.appendChild(resumeLink);
+        resumeLink.click();
+        document.body.removeChild(resumeLink);
+      })
+      .catch((err) => {
+        alert("Resume file not found or path is incorrect!");
+        console.error(err);
+      });
+  });
+}
+
 
   // 📧 CONTACT FORM VALIDATION
   const contactForm = document.getElementById('contactForm');
@@ -97,3 +115,4 @@ scrollBtn?.addEventListener("click", () => {
     }
   }
 });
+
